@@ -21,10 +21,11 @@ Of course, this kind of service already exists in the real life - it’s a learn
 Enjoy!
 
 ## Learning Objectives
-[] - How to create an API with Express
-[] - How to authenticate a user
-[] - How to store data in MongoDB
-[] - How to store temporary data in Redis
-[] - How to setup and use a background worker
-[] - How to create and manipulate files
+* [x] 0. How to create an API with Express
+* [x] 1. How to authenticate a user
+* [x] 2. How to store data in MongoDB
+* [x] 3. How to store temporary data in Redis
+* [x] 4. How to setup and use a background worker
+* [x] 5. How to create and manipulate files
+
 
