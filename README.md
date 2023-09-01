@@ -28,4 +28,13 @@ Enjoy!
 * [x] 4. How to setup and use a background worker
 * [x] 5. How to create and manipulate files
 
+## Requirements
+* All of your code will be compiled/interpreted on Ubuntu 18.04, Node 12.x and npm 6.x
+* All of your files should end with a new line
+* A ```README.md``` file, at the root of the folder of the project, is mandatory
+* Your code should use the ```js``` extension
+* Your code will be verified against lint using ESLint
+
+## Tasks
+
 
