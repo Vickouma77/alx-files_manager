@@ -1,0 +1,17 @@
+{
+  "name": "alx-files_manager",
+  "version": "1.0.0",
+  "description": "Files manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "eslint": "^8.48.0",
+    "express": "^4.18.2",
+    "kue": "^0.11.6"
+  }
+}
