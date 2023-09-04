@@ -1,9 +1,8 @@
 #!/usr/bin/node
 
 const express = require('express');
-const router = require('./routes/index');
-
 const app = express();
+const router = require('./routes/index');
 
 const port = parseInt(process.env.PORT, 10) || 5000;
 
