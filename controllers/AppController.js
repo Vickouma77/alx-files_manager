@@ -3,23 +3,24 @@
 const { dbClient } = require('../utils/db');
 const { redisClient } = require('../utils/redis');
 
+
 class AppController {
-  static getStatus(req, res) {
-    const status = {
-      redis: redisClient.isAlive(),
-      db: dbClient.isAlive(),
-    };
-    res.status(200).send(status);
+  static async getStatus(req, res) {
+    const redisStatus = redisClient.isAlive();
+    const dbStatus = dbClient.isAlive();
+
+    if (redisStatus && dbStatus) {
+      return res.status(200).json({ redis: true, db: true });
+    } else {
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
   }
 
   static async getStats(req, res) {
-    const users = await dbClient.nbUsers();
-    const files = await dbClient.nbFiles();
-    const status = {
-      users,
-      files,
-    };
-    res.status(200).send(status);
+    const usersCount = await dbClient.nbUsers();
+    const filesCount = await dbClient.nbFiles();
+
+    return res.status(200).json({ users: usersCount, files: filesCount });
   }
 }
 
