@@ -1,15 +1,15 @@
 #!/usr/bin/node
 
 const express = require('express');
-
+const router = require('./routes/index');
 const app = express();
 
-const port = process.env.PORT || 5000;
+const port = parseInt(process.env.PORT, 10) || 5000;
 
-app.get('/routes/index.js', (req, res) => {
-    res.send('Welcome to Holberton School!');
-})
+app.use('/', router);
 
 app.listen(port, () => {
-    console.log(`Server listening at http://localhost:${port}`);
+    console.log(`Server running on port ${port}`);
 });
+
+module.exports = app;
