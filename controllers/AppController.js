@@ -9,7 +9,7 @@ class AppController {
     response.status(200).json({ redis: redisClient.isAlive(), db: dbClient.isAlive() });
   };
 
-  static async getStats(req, res) {
+  static async getStats(request, response) {
     const users = await dbClient.nbUsers();
     const files = await dbClient.nbFiles();
     response.status(200).json({ users, files });
