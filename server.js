@@ -2,6 +2,7 @@
 
 const express = require('express');
 const router = require('./routes/index');
+
 const app = express();
 
 const port = parseInt(process.env.PORT, 10) || 5000;
@@ -9,7 +10,7 @@ const port = parseInt(process.env.PORT, 10) || 5000;
 app.use('/', router);
 
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });
 
 module.exports = app;
