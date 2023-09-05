@@ -31,9 +31,6 @@ class DBClient {
     return this.files.countDocuments();
   }
 
-  async postNew() {
-    return this.users.insertOne();
-  }
 }
 
 const dbClient = new DBClient();
